@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --blue: hsl(205, 90%, 55%);
+  --purple: hsl(261, 51%, 51%);
+  --pink: hsl(330, 67%, 52%);
+  --red: hsl(354, 70%, 54%);
+  --orange: hsl(27, 98%, 54%);
+  --yellow: hsl(45, 100%, 51%);
+  --green: hsl(90, 80%, 48%);
+  --teal: hsl(162, 73%, 46%);
+  --cyan: hsl(190, 90%, 50%);
+  --dark: #282c34;
+  --gray: hsl(208, 7%, 46%);
+  --gray-dark: hsl(210, 10%, 23%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+  margin: 0;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark);
+  color: white;
 }
+
+.blue { color: var(--blue); }
+.purple { color: var(--purple); }
+.pink { color: var(--pink); }
+.red { color: var(--red); }
+.orange { color: var(--orange); }
+.yellow { color: var(--yellow); }
+.green { color: var(--green); }
+.teal { color: var(--teal); }
+.cyan { color: var(--cyan); }
+.gray { color: var(--gray); }
+.gray-dark { color: var(--gray-dark); }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  background-color: #363a45;
+  height: 100vh;
+  margin-right: 15px;
+  overflow-y: scroll;
+  text-align: center;
+  width: 250px;
+}
+nav ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+nav li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav-active {
+  color: grey;
+  transition: all .3s ease-out;
+}
+
